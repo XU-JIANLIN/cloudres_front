@@ -2,11 +2,10 @@
 
   <div class="head">
 	<!-- 导航栏 -->
-	<van-nav-bar
-  left-text=""
-  left-arrow
-  @click-left="onClickLeft"
-	/>
+	<router-link   to="/home">
+		<van-nav-bar left-text="" left-arrow />
+	</router-link>
+	
     <font class="head_title">{{ msg }}</font>
 		<div  class="content">
 			<van-tabs v-model="active">

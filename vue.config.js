@@ -1,4 +1,5 @@
 module.exports = {
   outputDir: 'dist',
-  publicPath: process.env.NODE_ENV === 'production' ? '/vant-demo/' : '/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/vant-demo/' : '/',
+  lintOnSave:false
 };

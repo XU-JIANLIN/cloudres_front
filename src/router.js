@@ -6,13 +6,27 @@ Vue.use(Router);
 const routes = [
   {
     path: '*',
-    redirect: '/login'
+    redirect: '/home'
   },
   {
-    name: 'login',
-    component: () => import('./view/login'),
+    name: 'home',
+    component: () => import('./view/home'),
     meta: {
-      title: '会员登录'
+      title: '首页'
+    }
+  },
+  {
+    name: 'search',
+    component: () => import('./view/search'),
+    meta: {
+      title: '发现'
+    }
+  },
+  {
+    name: 'order',
+    component: () => import('./view/order'),
+    meta: {
+      title: '订单'
     }
   },
   {
@@ -22,6 +36,17 @@ const routes = [
       title: '会员中心'
     }
   },
+  
+  {
+    name: 'login',
+    component: () => import('./view/login'),
+
+    meta: {
+      title: '会员登录',
+      TabbarShow: true ,// 不需要显示 底部导航
+    }
+  },
+  
   {
     name: 'cart',
     component: () => import('./view/cart'),
